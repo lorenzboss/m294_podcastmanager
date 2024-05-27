@@ -1,0 +1,28 @@
+mat-toolbar {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+h1 {
+  align-content: center;
+}
+
+button {
+  margin: 20px 10px;
+  border-radius: 20px;
+  height: 45px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.loginButton {
+  border: 3px solid black;
+}
