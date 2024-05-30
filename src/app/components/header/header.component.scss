@@ -1,28 +1,45 @@
 mat-toolbar {
   width: 100%;
-}
 
-.header {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 10px;
-}
+  .header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
 
-h1 {
-  align-content: center;
-}
+    h1 {
+      align-content: center;
 
-button {
-  margin: 20px 10px;
-  border-radius: 20px;
-  height: 45px;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-}
+      span {
+        color: #536dfe;
+        font-weight: 600;
+      }
+    }
 
-.loginButton {
-  border: 3px solid black;
+    .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      div {
+        margin-left: 20px;
+      }
+
+      button {
+        margin: 20px 5px;
+        border-radius: 10px;
+        height: 45px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .loginButton,
+      .logoutButton {
+        width: 100px;
+        border: 1px solid black;
+      }
+    }
+  }
 }
