@@ -34,6 +34,10 @@ import { TopicsComponent } from './pages/topics/topics.component';
 import { AddTopicDialogComponent } from './components/add-topic-dialog/add-topic-dialog.component';
 import { EditTopicDialogComponent } from './components/edit-topic-dialog/edit-topic-dialog.component';
 import { DeleteTopicDialogComponent } from './components/delete-topic-dialog/delete-topic-dialog.component';
+import { PodcastsComponent } from './pages/podcasts/podcasts.component';
+import { AddPodcastDialogComponent } from './components/add-podcast-dialog/add-podcast-dialog.component';
+import { EditPodcastDialogComponent } from './components/edit-podcast-dialog/edit-podcast-dialog.component';
+import { DeletePodcastDialogComponent } from './components/delete-podcast-dialog/delete-podcast-dialog.component';
 
 export const authConfig: AuthConfig = {
   issuer: 'http://localhost:8080/realms/ILV',
@@ -70,6 +74,10 @@ export function storageFactory(): OAuthStorage {
     AddTopicDialogComponent,
     EditTopicDialogComponent,
     DeleteTopicDialogComponent,
+    PodcastsComponent,
+    AddPodcastDialogComponent,
+    EditPodcastDialogComponent,
+    DeletePodcastDialogComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import { appCanActivate } from './guard/app.auth.guard';
 import { NoAccessComponent } from './pages/no-access/no-access.component';
 import { ArtistsComponent } from './pages/artists/artists.component';
 import { TopicsComponent } from './pages/topics/topics.component';
+import { PodcastsComponent } from './pages/podcasts/podcasts.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent, data: { title: 'Home' } },
@@ -25,6 +26,15 @@ const routes: Routes = [
     data: {
       roles: [AppRoles.Admin, AppRoles.Staff, AppRoles.User],
       title: 'Topics',
+    },
+  },
+  {
+    path: 'podcasts',
+    component: PodcastsComponent,
+    canActivate: [appCanActivate],
+    data: {
+      roles: [AppRoles.Admin, AppRoles.Staff, AppRoles.User],
+      title: 'Podcasts',
     },
   },
   {

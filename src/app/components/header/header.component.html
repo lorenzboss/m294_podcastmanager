@@ -32,6 +32,15 @@
         Topics
       </button>
 
+      <button
+        *ngIf="oauthService.hasValidAccessToken()"
+        mat-raised-button
+        [routerLink]="['podcasts']"
+        color="primary"
+      >
+        Podcasts
+      </button>
+
       <div>
         <button
           *ngIf="!oauthService.hasValidAccessToken()"
