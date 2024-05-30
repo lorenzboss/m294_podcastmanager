@@ -23,9 +23,13 @@ import {
   HttpClientXsrfModule,
 } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
-import { TestPageComponent } from './pages/test-page/test-page.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NoAccessComponent } from './pages/no-access/no-access.component';
+import { ArtistsComponent } from './pages/artists/artists.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AddArtistDialogComponent } from './components/add-artist-dialog/add-artist-dialog.component';
+import { EditArtistDialogComponent } from './components/edit-artist-dialog/edit-artist-dialog.component';
+import { DeleteArtistDialogComponent } from './components/delete-artist-dialog/delete-artist-dialog.component';
 
 export const authConfig: AuthConfig = {
   issuer: 'http://localhost:8080/realms/ILV',
@@ -52,9 +56,12 @@ export function storageFactory(): OAuthStorage {
     IsInRoleDirective,
     IsInRolesDirective,
     HeaderComponent,
-    TestPageComponent,
     HomepageComponent,
     NoAccessComponent,
+    ArtistsComponent,
+    AddArtistDialogComponent,
+    EditArtistDialogComponent,
+    DeleteArtistDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,9 +73,11 @@ export function storageFactory(): OAuthStorage {
     MatTableModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
     MatToolbarModule,
+    MatIconModule,
     HttpClientXsrfModule.withOptions({
       cookieName: 'XSRF-TOKEN',
       headerName: 'X-XSRF-TOKEN',
