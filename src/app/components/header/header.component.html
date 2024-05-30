@@ -23,6 +23,15 @@
         Artists
       </button>
 
+      <button
+        *ngIf="oauthService.hasValidAccessToken()"
+        mat-raised-button
+        [routerLink]="['topics']"
+        color="primary"
+      >
+        Topics
+      </button>
+
       <div>
         <button
           *ngIf="!oauthService.hasValidAccessToken()"

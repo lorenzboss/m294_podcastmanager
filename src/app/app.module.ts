@@ -30,6 +30,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AddArtistDialogComponent } from './components/add-artist-dialog/add-artist-dialog.component';
 import { EditArtistDialogComponent } from './components/edit-artist-dialog/edit-artist-dialog.component';
 import { DeleteArtistDialogComponent } from './components/delete-artist-dialog/delete-artist-dialog.component';
+import { TopicsComponent } from './pages/topics/topics.component';
+import { AddTopicDialogComponent } from './components/add-topic-dialog/add-topic-dialog.component';
+import { EditTopicDialogComponent } from './components/edit-topic-dialog/edit-topic-dialog.component';
+import { DeleteTopicDialogComponent } from './components/delete-topic-dialog/delete-topic-dialog.component';
 
 export const authConfig: AuthConfig = {
   issuer: 'http://localhost:8080/realms/ILV',
@@ -62,6 +66,10 @@ export function storageFactory(): OAuthStorage {
     AddArtistDialogComponent,
     EditArtistDialogComponent,
     DeleteArtistDialogComponent,
+    TopicsComponent,
+    AddTopicDialogComponent,
+    EditTopicDialogComponent,
+    DeleteTopicDialogComponent,
   ],
   imports: [
     BrowserModule,
