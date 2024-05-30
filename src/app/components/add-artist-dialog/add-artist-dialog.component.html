@@ -3,12 +3,30 @@
     <div class="form-container">
       <mat-form-field class="form-field">
         <mat-label>First Name</mat-label>
-        <input matInput formControlName="firstname" />
+        <input
+          matInput
+          formControlName="firstname"
+          minlength="2"
+          maxlength="20"
+          #firstname
+        />
+        <mat-hint align="end">
+          {{ firstname.value.length }}/{{ firstname.maxLength }}
+        </mat-hint>
       </mat-form-field>
 
       <mat-form-field class="form-field">
         <mat-label>Last Name</mat-label>
-        <input matInput formControlName="lastname" />
+        <input
+          matInput
+          formControlName="lastname"
+          minlength="2"
+          maxlength="20"
+          #lastname
+        />
+        <mat-hint align="end">
+          {{ lastname.value.length }}/{{ lastname.maxLength }}
+        </mat-hint>
       </mat-form-field>
 
       <div class="button-container">
