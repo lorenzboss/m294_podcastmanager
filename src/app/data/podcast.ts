@@ -4,22 +4,30 @@ import { Topic } from './topic';
 export class Podcast {
   id!: number;
   title!: string;
-  descrption!: string;
+  description!: string;
   artists!: Artist[];
   topics!: Topic[];
 }
 
 export class CreatePodcast {
   title!: string;
-  descrption!: string;
-  artistIDs!: string[];
-  topicIds!: string[];
+  description!: string;
+  artists!: CreatePodcastArtist[];
+  topics!: CreatePodcastTopic[];
 }
 
 export class UpdatePodcast {
   id!: number;
   title!: string;
-  descrption!: string;
-  artistIDs!: string[];
-  topicIds!: string[];
+  description!: string;
+  artists!: CreatePodcastArtist[];
+  topics!: CreatePodcastTopic[];
+}
+
+export class CreatePodcastArtist {
+  id!: number;
+}
+
+export class CreatePodcastTopic {
+  id!: number;
 }
