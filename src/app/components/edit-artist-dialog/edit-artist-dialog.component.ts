@@ -1,16 +1,16 @@
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { ArtistsComponent } from '../../pages/artists/artists.component';
 import { ArtistsService } from '../../service/artists.service';
-import { Artist, CreateArtist } from '../../data/artist';
+import { Artist } from '../../data/artist';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-edit-artist-dialog',
   templateUrl: './edit-artist-dialog.component.html',
   styleUrl: './edit-artist-dialog.component.scss',
 })
-export class EditArtistDialogComponent {
+export class EditArtistDialogComponent implements OnInit {
   artistForm = this.fb.group({
     firstname: ['', Validators.required],
     lastname: ['', Validators.required],

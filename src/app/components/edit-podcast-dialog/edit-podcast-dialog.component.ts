@@ -1,25 +1,24 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { PodcastsService } from '../../service/podcasts.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { Artist } from '../../data/artist';
+import { ArtistsService } from '../../service/artists.service';
+import { Topic } from '../../data/topic';
+import { TopicsService } from '../../service/topics.service';
 import {
-  CreatePodcast,
   CreatePodcastArtist,
   CreatePodcastTopic,
   Podcast,
   UpdatePodcast,
 } from '../../data/podcast';
-import { Artist } from '../../data/artist';
-import { ArtistsService } from '../../service/artists.service';
-import { Topic } from '../../data/topic';
-import { TopicsService } from '../../service/topics.service';
 
 @Component({
   selector: 'app-edit-podcast-dialog',
   templateUrl: './edit-podcast-dialog.component.html',
   styleUrl: './edit-podcast-dialog.component.scss',
 })
-export class EditPodcastDialogComponent {
+export class EditPodcastDialogComponent implements OnInit {
   podcastForm = this.fb.group({
     title: ['', Validators.required],
     description: ['', Validators.required],

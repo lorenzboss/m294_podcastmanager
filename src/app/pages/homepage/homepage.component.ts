@@ -16,7 +16,7 @@ export class HomepageComponent implements OnInit {
 
   saveWriter() {
     const writer: CreateWriter = { firstname: 'John', lastname: 'Boss' };
-    this.writerService.saveWriter(writer).subscribe((writer) => {
+    this.writerService.saveWriter(writer).subscribe(() => {
       this.getWriters();
     });
   }

@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { ArtistsComponent } from '../../pages/artists/artists.component';
 import { ArtistsService } from '../../service/artists.service';
-import { Artist, CreateArtist } from '../../data/artist';
+import { CreateArtist } from '../../data/artist';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({

@@ -1,16 +1,16 @@
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { TopicsComponent } from '../../pages/topics/topics.component';
 import { TopicsService } from '../../service/topics.service';
-import { Topic, CreateTopic } from '../../data/topic';
+import { Topic } from '../../data/topic';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-edit-topic-dialog',
   templateUrl: './edit-topic-dialog.component.html',
   styleUrl: './edit-topic-dialog.component.scss',
 })
-export class EditTopicDialogComponent {
+export class EditTopicDialogComponent implements OnInit {
   topicForm = this.fb.group({
     description: ['', Validators.required],
   });
