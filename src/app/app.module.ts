@@ -38,6 +38,7 @@ import { PodcastsComponent } from './pages/podcasts/podcasts.component';
 import { AddPodcastDialogComponent } from './components/add-podcast-dialog/add-podcast-dialog.component';
 import { EditPodcastDialogComponent } from './components/edit-podcast-dialog/edit-podcast-dialog.component';
 import { DeletePodcastDialogComponent } from './components/delete-podcast-dialog/delete-podcast-dialog.component';
+import { MatSelectModule } from '@angular/material/select';
 
 export const authConfig: AuthConfig = {
   issuer: 'http://localhost:8080/realms/ILV',
@@ -93,6 +94,7 @@ export function storageFactory(): OAuthStorage {
     FormsModule,
     ReactiveFormsModule,
     MatToolbarModule,
+    MatSelectModule,
     MatIconModule,
     HttpClientXsrfModule.withOptions({
       cookieName: 'XSRF-TOKEN',
