@@ -1,6 +1,7 @@
 # M294Podcastmanager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+The corresponding backend can be found in this repository: [lorenzboss/m295_podcastmanager](https://github.com/lorenzboss/m295_podcastmanager)
+
 
 ## Development server
 
